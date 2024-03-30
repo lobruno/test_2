@@ -1,5 +1,6 @@
 package com.example.test_2.service;
 
+import com.example.test_2.entities.Quote;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,4 +66,16 @@ public class UserService implements UserDetailsService {
         //user.setRoles(List.of(roleService.getUserRole()));
         return userRepository.save(user);
     }
+
+//    public List<Quote> getMyPhrasesByUsername(String username) {
+//
+//        long userId = commonDao.getUserIdByToken(accessToken);
+//
+//        List<Quote> phrases = userDao.getPhrasesByUserId(userId);
+//        commonService.phraseEnrichment(phrases);
+//
+//        return new ResponseEntity<>(SuccessResponse.builder().data(CommonPhrasesResp.builder().phrases(phrases).build()).build(), HttpStatus.OK);
+//    }
+
+
 }
